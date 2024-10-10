@@ -1,0 +1,112 @@
+/* 
+https://huangxin.dev/partly-technical/webfont-from-beginner-to-sans-serif
+https://u.sb/css-cdn/ 
+*/
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
+@import url('https://fonts.loli.net/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* set global css variables */
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+* {
+    /* This makes dealing with the sizes of elements much easier */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9fafb;
+    font-family: 'Open Sans', sans-serif;
+    /* TODO */
+    display: flex;
+    /* It controls the alignment of items on the [cross axis](https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis).  */
+    align-items: center;
+    /* The CSS justify-content property defines how the browser distributes space between and around content items along the main axis of a flex container and the inline axis of grid and multicol containers. */
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+.form {
+    /* top and bottom | left and right */
+    padding: 30px 40px;
+}
+
+h2 {
+    /* sets the horizontal alignment of the inline-level content */
+    text-align: center;
+    /* hamburger structure */
+    /* top | left and right | bottom */
+    margin: 0 0 20px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    /* TODO */
+    position: relative;
+}
+
+.form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    /* TODO */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    /* display: none; */
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #3489db;
+    border: 2px solid #3489db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
